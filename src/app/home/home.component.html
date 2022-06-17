@@ -1,0 +1,19 @@
+<div>
+    <div *ngFor="let item of sliderList">
+        <img [src]="item.image" width="200" height="200">
+        <!-- <section class="carousel-wrapper">
+            <ul class="carousel-inner" #carousel>
+              <li *ngFor="let item of sliderList;" class="carousel-item">
+                <ng-container [ngTemplateOutlet]="item.image"></ng-container>
+              </li>
+            </ul>
+          </section> -->
+    </div>
+    <div>
+        <button (click)="next()">Next</button>
+        <button (click)="prev()">Previous</button>
+    </div>
+
+
+
+</div>
