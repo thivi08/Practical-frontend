@@ -38,7 +38,8 @@ export class HomeComponent implements OnInit {
       })
 
   }
-  i = 0;
+
+  i:number = 0;
 
   getSlide() {
     return this.sliderList[this.i].image;
@@ -53,7 +54,7 @@ export class HomeComponent implements OnInit {
   getPrev() {
     this.i = this.i === 0 ? 0 : this.i - 1;
   }
-  //edit here    
+   
   getNext() {
     this.i = this.i === this.sliderList.length ? this.i : this.i + 1;
   }
