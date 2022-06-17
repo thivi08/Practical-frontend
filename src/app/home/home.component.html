@@ -1,19 +1,17 @@
 <div>
-    <div *ngFor="let item of sliderList">
-        <img [src]="item.image" width="200" height="200">
-        <!-- <section class="carousel-wrapper">
-            <ul class="carousel-inner" #carousel>
-              <li *ngFor="let item of sliderList;" class="carousel-item">
-                <ng-container [ngTemplateOutlet]="item.image"></ng-container>
-              </li>
-            </ul>
-          </section> -->
-    </div>
-    <div>
-        <button (click)="next()">Next</button>
-        <button (click)="prev()">Previous</button>
-    </div>
+  <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
 
-
+    <div class="carousel-inner" role="listbox" style="width:100%; height:auto">
+        <img src="{{ getSlide() }}" alt="slide" style="width:100%">
+        <div class="text-slide" >{{getTitle()}}</div>
+        <br/>
+        <div class="text-slide">{{getSubTitle()}}</div>
+    </div>
+  
+   <button (click)='getPrev()'><</button>
+  
+   <button (click)='getNext()'>></button>
+  
+  </div>
 
 </div>
