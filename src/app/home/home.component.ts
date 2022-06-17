@@ -27,7 +27,6 @@ export class HomeComponent implements OnInit {
               return;
             }
             this.sliderList = response.slides;
-            console.log(">>>>>>>>>", this.sliderList)
 
           } catch (error) {
             console.log("Error", error);
@@ -39,25 +38,24 @@ export class HomeComponent implements OnInit {
       })
 
   }
-  slides: string [] = ['./assets/SBI_Slide_1.jpg', './assets/Eagle_Slide_2.jpg', './assets/Knot_Slide_3.jpg' ]
-  i=0;
+  i = 0;
 
   getSlide() {
-      return this.sliderList[this.i].image;
+    return this.sliderList[this.i].image;
   }
   getTitle() {
-      return this.sliderList[this.i].title;
+    return this.sliderList[this.i].title;
   }
   getSubTitle() {
-      return this.sliderList[this.i].subTitle;
+    return this.sliderList[this.i].subTitle;
   }
 
   getPrev() {
-      this.i = this.i===0 ? 0 : this.i - 1;
+    this.i = this.i === 0 ? 0 : this.i - 1;
   }
-//edit here    
+  //edit here    
   getNext() {
-      this.i = this.i===this.sliderList.length ? this.i : this.i + 1;
+    this.i = this.i === this.sliderList.length ? this.i : this.i + 1;
   }
 
 }
